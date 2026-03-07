@@ -19,7 +19,7 @@
   <body>
     <main>
       <h2>Submit a Technical Request</h2>
-      <form>
+      <form id="contact-form">
         <div>
           <label for="name">Name:</label>
           <input id="name" type="text" name="name" required />
@@ -35,6 +35,28 @@
             required
           />
         </div>
+
+        <div>
+            <label for="due-date">Due Date:</label>
+            <input 
+                id="due-date"
+                type="date"
+                name="dueDate"
+                >
+        </div>
+
+        <div>
+            <label for="team">Team:</label>
+            <select id="team" name="team">
+                <option value="" disabled selected>Select a team</option>
+                <option value="analytics">Analytics</option>
+                <option value="people">People</option>
+                <option value="eng">Engineering</option>
+                <option value="product">Product</option>d
+            </select>
+        </div>
+
+
         <div>
           <label for="form-message">Your message:</label>
           <textarea
@@ -51,6 +73,8 @@
           <button class="button" type="reset">Reset</button>
         </div>
       </form>
+      <p id="response"></p>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
